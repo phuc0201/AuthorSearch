@@ -1,0 +1,98 @@
+#author-list{
+    min-height: 646px;
+    position: relative;
+    table {
+        width: 100%;
+        tr{
+            cursor: pointer;
+            td.mat-column-photo{
+                display: flex;
+                padding: 10px;
+                img{
+                    margin: auto;
+                }
+            }
+            td.mat-column-handle div{
+                display: flex;
+                button{
+                    display: flex;
+                    padding: 5px;
+                    margin: 0 2px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    color: #6b6bff;
+                    mat-icon{
+                        margin: auto;
+                        width: 30px;
+                        height: 30px;
+                        font-size: 30px;
+                    }
+
+                }
+                a button{ color: #da4a54; }
+            }
+        }
+    }
+    .modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: .2);
+    }
+    .modal-form{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        background-color: #fff;
+        opacity: 0;
+        transition: transform 0.3s ease;
+        animation: fadeIn 0.3s ease forwards;
+        max-width: 600px;
+        min-width: 600px;
+        z-index: 10;
+        .modal-header{
+            display: flex;
+            flex-direction: row-reverse;
+            mat-icon{
+                cursor: pointer;
+            }
+        }
+        .modal-body{
+            display: flex;
+            padding: 10px;
+            .author-photo{
+                width: 200px;
+                height: 200px;
+                background-color: aliceblue;
+                box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .1);
+            }
+            .author-detail{
+                padding: 0 10px 0 10px;
+                div{
+                    margin-bottom: 10px;
+                }
+                h5,p{
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 16px;
+                    height: 16px;
+                }
+                h5{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

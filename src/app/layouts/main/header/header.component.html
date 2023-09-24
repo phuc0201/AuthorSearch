@@ -1,0 +1,32 @@
+<div id="header">    
+    <div class="nav__wrapper">
+        <div class="nav__left">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/167/167755.png" alt="logo" width="100" height="100" style="margin-right: 10px;">
+                <h5>Book Search</h5>
+            </div>
+        </div>
+        <div class="nav__middle">
+        </div>
+        <div class="nav__right">
+           <mat-icon>account_circle</mat-icon>
+        </div>
+    </div>
+    <div id="header__content">
+        <div>
+            <h2 class='header-title text-capitalize'>Tìm kiếm sách và tác giả mà bạn yêu thích</h2>
+            <div id="search-form">
+                <!-- <label class="select">
+                    <select (change)="onSelectChange($event)" [(ngModel)]="selectedOption">
+                        <option value="book-search">Sách</option>
+                        <option value="author-search">Tác giả</option>
+                    </select>
+                </label> -->
+                <input type="text" placeholder="search" (keydown.enter)="searchEvent.emit(searchValue)" (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" [value]="searchValue">
+                <button type="submit" (click)="searchEvent.emit(searchValue)">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

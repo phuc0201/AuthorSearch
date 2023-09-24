@@ -1,0 +1,15 @@
+<div id="pagination">
+    <div class="pagination_wrap">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+    
+        <div class="numCurrPage">
+            <span>{{ currentPage }}</span>
+        </div>
+    
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</div>

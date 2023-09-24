@@ -1,0 +1,4 @@
+<app-header (searchEvent)="searchString = $event" ></app-header>
+<div id="author-list">
+    <app-author-list [searchString]="searchString"></app-author-list>
+</div>
